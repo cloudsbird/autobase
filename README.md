@@ -9,7 +9,12 @@
 [![Flake8](https://github.com/vitabaks/autobase/actions/workflows/flake8.yml/badge.svg)](https://github.com/vitabaks/autobase/actions/workflows/flake8.yml)
 [![Molecule](https://github.com/vitabaks/autobase/actions/workflows/molecule.yml/badge.svg)](https://github.com/vitabaks/autobase/actions/workflows/molecule.yml)
 [![GitHub license](https://img.shields.io/github/license/vitabaks/autobase)](https://github.com/vitabaks/autobase/blob/master/LICENSE)
-![GitHub stars](https://img.shields.io/github/stars/vitabaks/autobase)
+<a href="https://algora.io/autobase/bounties/new">
+  <img
+    src="https://img.shields.io/endpoint?url=https%3A%2F%2Falgora.io%2Fapi%2Fshields%2Fautobase%2Fbounties%3Fstatus%3Dopen"
+    alt="Open Bounties"
+  />
+</a>
 
 **Autobase for PostgreSQL®** is an open-source alternative to cloud-managed databases (DBaaS) such as Amazon RDS, Google Cloud SQL, Azure Database, and more.
 
@@ -154,26 +159,14 @@ docker run -d --name autobase-console \
   --restart=unless-stopped \
   autobase/console:latest
 ```
-Alternatively, you can use Docker Compose:
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/vitabaks/autobase.git
-   cd autobase
-   ```
-
-2. Navigate to the `console` directory and run Docker Compose:
-   ```sh
-   cd console
-   docker compose up -d
-   ```
-You can find the Docker Compose file at [`console/docker-compose.yml`](console/docker-compose.yml:1).
 
 > [!NOTE]
 > If you are running the console on a dedicated server (rather than on your laptop), replace `localhost` with the server’s IP address in the `PG_CONSOLE_API_URL` variable.
 
 > [!TIP]
 > It is recommended to run the console in the same network as your database servers to enable monitoring of the cluster status.
+
+Alternatively, you can use [Docker Compose](console/README.md).
 
 **Open the Console UI**:
 
